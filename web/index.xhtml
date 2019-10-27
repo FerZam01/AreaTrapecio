@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <title>Calculo de Trapecio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </h:head>
+    <h:body>
+       <form jsf:prependId="false">
+      <h1>Calcular un Trapecio</h1>
+      <img src="imagen/figTrapecio.png" /><p/>
+      <img src="imagen/formulaTrapecio.png" />
+      <h:messages globalOnly="true"/>
+      <p>
+          <input jsf:id="basemenor" type="text" placeholder="Base Menor"
+               jsf:required="true" jsf:requiredMessage="Nesesita ingresar Base Menor" 
+               jsf:value="#{ctrlCalculo.baseMenor}"/>
+        <h:message for="basemenor"/>
+      </p>
+      <p>
+          <input jsf:id="basemayor" type="text" placeholder="Base Mayor"
+               jsf:required="true" jsf:requiredMessage="Nesesita ingresar Base Mayor"
+               jsf:value="#{ctrlCalculo.baseMayor}"/>
+        <h:message for="basemayor"/>
+      </p>
+      <p>
+          <input jsf:id="altura" type="text" placeholder="Altura"
+               jsf:required="true" jsf:requiredMessage="Nesesita ingresar Altura" 
+               jsf:value="#{ctrlCalculo.altura}"/>
+        <h:message for="altura"/>
+      </p>
+      <p>
+          <button jsf:action="#{ctrlCalculo.calculaArea()}" >Calcular</button>
+      </p>
+    </form>
+    </h:body>
+</html>
+
