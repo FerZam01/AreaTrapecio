@@ -25,11 +25,15 @@ public class CtrlCalculo {
     private double baseMayor;
     private double altura;
     private double area;
-    
-    public void calculaArea(){
-        area = ((getBaseMayor() + getBaseMenor()) / 2)* getAltura();
-        final String mensaje = "La Area es  "+ String.valueOf(area);
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(mensaje));
+
+    public void calculaArea() {
+        if (getBaseMayor() == 0 || getBaseMenor() == 0 || getAltura() == 0) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Ningun Valor puede ser 0, YA que si es asi La figura no sería un TRAPECIO"));
+        } else if (getBaseMayor() != 0 || getBaseMenor() != 0 || getAltura() != 0) {
+            area = ((getBaseMayor() + getBaseMenor()) / 2) * getAltura();
+            final String mensaje = "La Area es  " + String.valueOf(area);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(mensaje));
+        }
     }
 
     public double getBaseMenor() {
@@ -63,6 +67,5 @@ public class CtrlCalculo {
     public void setArea(double area) {
         this.area = area;
     }
-    
-    
+
 }

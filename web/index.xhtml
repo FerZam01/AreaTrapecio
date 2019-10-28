@@ -12,21 +12,24 @@
       <h1>Calcular un Trapecio</h1>
       <img src="imagen/figTrapecio.png" /><p/>
       <img src="imagen/formulaTrapecio.png" />
-      <h:messages globalOnly="true"/>
+      <h:messages style="color:red" globalOnly="true"/>
       <p>
-          <input jsf:id="basemenor" type="text" placeholder="Base Menor"
+          <h:outputLabel value="Base Menor"/>
+          <input jsf:id="basemenor" type="number" step="any" placeholder="Base Menor"
                jsf:required="true" jsf:requiredMessage="Nesesita ingresar Base Menor" 
                jsf:value="#{ctrlCalculo.baseMenor}"/>
         <h:message for="basemenor"/>
       </p>
       <p>
-          <input jsf:id="basemayor" type="text" placeholder="Base Mayor"
+          <h:outputLabel value="Base Mayor"/>
+          <input jsf:id="basemayor" type="number" step="any" placeholder="Base Mayor"
                jsf:required="true" jsf:requiredMessage="Nesesita ingresar Base Mayor"
                jsf:value="#{ctrlCalculo.baseMayor}"/>
         <h:message for="basemayor"/>
       </p>
       <p>
-          <input jsf:id="altura" type="text" placeholder="Altura"
+          <h:outputLabel value="Base Altura"/>
+          <input jsf:id="altura" type="number" step="any" placeholder="Altura"
                jsf:required="true" jsf:requiredMessage="Nesesita ingresar Altura" 
                jsf:value="#{ctrlCalculo.altura}"/>
         <h:message for="altura"/>
