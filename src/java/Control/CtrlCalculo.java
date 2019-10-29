@@ -29,6 +29,8 @@ public class CtrlCalculo {
     public void calculaArea() {
         if (getBaseMayor() == 0 || getBaseMenor() == 0 || getAltura() == 0) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Ningun Valor puede ser 0, YA que si es asi La figura no sería un TRAPECIO"));
+        } else if (getBaseMayor() <= getBaseMenor()) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(" El Valor de la Base Mayor no debe ser Menor o Igual  que el Valor de la base Menor"));
         } else if (getBaseMayor() != 0 || getBaseMenor() != 0 || getAltura() != 0) {
             area = ((getBaseMayor() + getBaseMenor()) / 2) * getAltura();
             final String mensaje = "La Area es  " + String.valueOf(area);
